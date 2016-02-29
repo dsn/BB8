@@ -1,19 +1,14 @@
 #include <SoftwareSerial.h>
-
 #include <Adafruit_Soundboard.h>
 
-// BB8
+#define SFX_ACT      3
+#define SFX_RST      4
+#define SFX_TX       5
+#define SFX_RX       6
+#define SFX_LED_PIN  9
+#define SPK_PIN     A5
 
-#define SFX_ACT 3
-#define SFX_RST 4
-#define SFX_TX  5
-#define SFX_RX  6
-
-#define SFX_LED_PIN 9
-
-#define SPK_PIN A5
-
-SoftwareSerial ss = SoftwareSerial(SFX_TX, SFX_RX);
+SoftwareSerial      ss = SoftwareSerial(SFX_TX, SFX_RX);
 Adafruit_Soundboard sfx = Adafruit_Soundboard(&ss, NULL, SFX_RST);
 
 uint8_t files;
