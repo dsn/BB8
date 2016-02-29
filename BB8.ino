@@ -13,14 +13,7 @@
 
 #define SPK_PIN A5
 
-// You can also monitor the ACT pin for when audio is playing!
-
-// we'll be using software serial
 SoftwareSerial ss = SoftwareSerial(SFX_TX, SFX_RX);
-
-// pass the software serial to Adafruit_soundboard, the second
-// argument is the debug port (not used really) and the third 
-// arg is the reset pin
 Adafruit_Soundboard sfx = Adafruit_Soundboard(&ss, NULL, SFX_RST);
 
 uint8_t files;
